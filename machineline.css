@@ -1,0 +1,333 @@
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: #101e2b;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #e6a23c;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e6a23c;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 440px;
+
+    background:
+        linear-gradient(rgba(5, 15, 25, .75),
+            rgba(5, 15, 25, .75)),
+        url("https://images.unsplash.com/photo-1581092160562-40aa08e78837");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #e6a23c;
+    color: #111;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: #172b3a;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+/* ABOUT SECTION */
+
+.intro {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.intro img {
+    width: 45%;
+    border-radius: 8px;
+    object-fit: cover;
+    min-height: 280px;
+}
+
+.intro-content {
+    flex: 1;
+}
+
+.intro-content h2 {
+    color: #172b3a;
+    margin-bottom: 15px;
+}
+
+.intro-content p {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* MACHINE SECTION */
+
+.machines {
+    background: #eaf0f4;
+}
+
+.machine-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.machine-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+    transition: 0.3s;
+}
+
+.machine-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.machine-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.machine-info {
+    padding: 20px;
+}
+
+.machine-info h3 {
+    color: #172b3a;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.machine-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* MANUFACTURING PROCESS */
+
+.process {
+    background: #172b3a;
+    color: white;
+}
+
+.process .section-title h2 {
+    color: white;
+}
+
+.process .section-title p {
+    color: #ccc;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.process-box {
+    padding: 22px 15px;
+    background: #263d50;
+    text-align: center;
+    border-radius: 7px;
+    border-bottom: 3px solid #e6a23c;
+}
+
+.process-box span {
+    display: block;
+    color: #e6a23c;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* QUALITY CONTROL */
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.quality-card {
+    background: white;
+    padding: 28px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .07);
+    transition: 0.3s;
+}
+
+.quality-card:hover {
+    transform: translateY(-5px);
+}
+
+.quality-card h3 {
+    color: #172b3a;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #101e2b;
+    color: white;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+footer p {
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .machine-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quality-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro img {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .machine-grid,
+    .process-grid,
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+
+}
